@@ -126,20 +126,6 @@ export const DailyLifeSlide: React.FC = () => {
               </ul>
             </div>
 
-            <div className="text-center">
-              <div className="text-8xl mb-4">📚</div>
-              <p className="text-lg text-gray-700 mb-4">
-                <strong>Meme Placeholder:</strong> Student life + yoga humor
-              </p>
-              <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
-                <p className="text-gray-500 text-sm">
-                  📁 public/memes/daily_life_student_meme.jpg
-                </p>
-                <p className="text-xs text-gray-400 mt-2">
-                  Replace with student yoga meme
-                </p>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div

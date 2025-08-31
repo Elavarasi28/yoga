@@ -10,14 +10,15 @@ interface TitleSlideProps {
 export const TitleSlide: React.FC<TitleSlideProps> = ({ onStart }) => {
   return (
     <Card className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 border-0">
-      <CardContent className="text-center p-8 max-w-4xl">
+      <CardContent className="text-center p-4 md:p-6 lg:p-8 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-4 md:space-y-6"
         >
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold text-gray-800 mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
@@ -31,7 +32,7 @@ export const TitleSlide: React.FC<TitleSlideProps> = ({ onStart }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-2xl md:text-3xl text-gray-600 mb-12 font-light">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 md:mb-12 font-light">
             Union of Body, Mind & Breath
           </h2>
         </motion.div>
@@ -51,14 +52,7 @@ export const TitleSlide: React.FC<TitleSlideProps> = ({ onStart }) => {
           </Button>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mt-16 text-gray-500 text-sm"
-        >
-          <p>Use arrow keys or click to navigate • Press Space to advance</p>
-        </motion.div>
+
       </CardContent>
     </Card>
   );

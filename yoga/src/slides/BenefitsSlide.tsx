@@ -93,22 +93,6 @@ export const BenefitsSlide: React.FC = () => {
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="text-center">
-            <div className="bg-white rounded-lg p-6 shadow-lg max-w-2xl mx-auto">
-              <div className="text-4xl mb-4">😄</div>
-              <p className="text-lg text-gray-700 mb-4">
-                <strong>Meme Placeholder:</strong> Replace with your favorite yoga meme!
-              </p>
-              <p className="text-sm text-gray-500">
-                Suggested: "Vadivelu Enna Koduma" meme or any yoga-related humor
-              </p>
-              <div className="mt-4 p-4 bg-gray-100 rounded border-2 border-dashed border-gray-300">
-                <p className="text-gray-500 text-sm">
-                  📁 public/memes/yoga_benefits_meme.jpg
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </CardContent>
     </Card>

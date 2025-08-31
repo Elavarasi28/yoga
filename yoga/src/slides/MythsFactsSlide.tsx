@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { RotateCcw, Lightbulb, X } from 'lucide-react';
+import { RotateCcw } from 'lucide-react';
 import type { MythFact } from '@/types';
 import { Button } from '@/components/ui/button';
 
@@ -57,22 +57,22 @@ export const MythsFactsSlide: React.FC = () => {
 
   return (
     <Card className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-violet-50 via-purple-50 to-indigo-50 border-0">
-      <CardContent className="p-8 max-w-6xl w-full">
+      <CardContent className="p-4 md:p-6 lg:p-8 max-w-6xl w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="text-center mb-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-6 md:mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
               Myths & Facts
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8">
               Let's bust some common yoga misconceptions
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-6 md:mb-8">
             {mythsFacts.map((mythFact) => (
               <motion.div
                 key={mythFact.id}
@@ -145,55 +145,6 @@ export const MythsFactsSlide: React.FC = () => {
             </Button>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Why These Myths Exist
-              </h2>
-              <ul className="space-y-3">
-                <li className="flex items-center text-gray-700">
-                  <X className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
-                  Social media shows only advanced poses
-                </li>
-                <li className="flex items-center text-gray-700">
-                  <X className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
-                  Commercialization of yoga industry
-                </li>
-                <li className="flex items-center text-gray-700">
-                  <X className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
-                  Lack of proper education about yoga
-                </li>
-              </ul>
-            </div>
-
-            <div className="text-center">
-              <div className="text-8xl mb-4">🎭</div>
-              <p className="text-lg text-gray-700 mb-4">
-                <strong>Meme Placeholder:</strong> Myth busting humor
-              </p>
-              <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
-                <p className="text-gray-500 text-sm">
-                  📁 public/memes/myths_facts_meme.jpg
-                </p>
-                <p className="text-xs text-gray-400 mt-2">
-                  Replace with myth busting meme
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="mt-12 text-center"
-          >
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-6 shadow-lg text-white">
-              <Lightbulb className="h-12 w-12 mx-auto mb-3" />
-              <p className="text-lg">
-                <strong>Remember:</strong> Yoga is a journey, not a destination. 
-                Start where you are, not where you think you should be!
-              </p>
-            </div>
-          </motion.div>
         </motion.div>
       </CardContent>
     </Card>

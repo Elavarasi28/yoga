@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Sunrise, Coffee, Zap, Clock, TrendingUp } from 'lucide-react';
+import { Sunrise, Clock, TrendingUp } from 'lucide-react';
 
 export const ProductivitySlide: React.FC = () => {
   const productivityTips = [
@@ -48,22 +48,22 @@ export const ProductivitySlide: React.FC = () => {
 
   return (
     <Card className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 border-0">
-      <CardContent className="p-8 max-w-6xl w-full">
+      <CardContent className="p-4 md:p-6 lg:p-8 max-w-6xl w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-8 md:mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
               Yoga for Productivity
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8">
               Boost your efficiency naturally with mindful practices
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
             {productivityTips.map((tip) => (
               <motion.div
                 key={tip.title}
@@ -90,64 +90,7 @@ export const ProductivitySlide: React.FC = () => {
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8 items-center mb-12">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                Energy vs Coffee: The Natural Way
-              </h2>
-              <div className="space-y-4">
-                <div className="bg-white rounded-lg p-4 shadow-md">
-                  <div className="flex items-center mb-2">
-                    <Coffee className="h-5 w-5 text-orange-600 mr-2" />
-                    <span className="font-semibold text-gray-800">Coffee Energy</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Quick spike, followed by crash, dependency, jitters
-                  </p>
-                </div>
-                
-                <div className="bg-green-50 rounded-lg p-4 shadow-md border-l-4 border-green-500">
-                  <div className="flex items-center mb-2">
-                    <Zap className="h-5 w-5 text-green-600 mr-2" />
-                    <span className="font-semibold text-gray-800">Yoga Energy</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Sustained energy, no crash, natural, calming
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-8xl mb-4">⚡</div>
-              <p className="text-lg text-gray-700 mb-4">
-                <strong>Meme Placeholder:</strong> Productivity + energy humor
-              </p>
-              <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
-                <p className="text-gray-500 text-sm">
-                  📁 public/memes/productivity_energy_meme.jpg
-                </p>
-                <p className="text-xs text-gray-400 mt-2">
-                  Replace with productivity meme
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 shadow-lg text-white">
-              <h3 className="text-2xl font-bold mb-3">
-                Pro Tip: The 4-7-8 Breathing Technique
-              </h3>
-              <p className="text-lg opacity-90">
-                Inhale for 4 counts, hold for 7, exhale for 8. 
-                Perfect for quick energy boost during work!
-              </p>
-            </div>
-          </motion.div>
+          
         </motion.div>
       </CardContent>
     </Card>

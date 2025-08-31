@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,7 +6,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Copy, Download, Share2, Heart, Sparkles, ArrowRight } from 'lucide-react';
 
 export const ClosingSlide: React.FC = () => {
-  const [showNotes, setShowNotes] = useState(false);
 
   const keyTakeaways = [
     "Yoga is more than exercise - it's a complete lifestyle",
@@ -55,7 +54,7 @@ Yoga: More than Just Exercise - Key Takeaways
 ${keyTakeaways.map((takeaway, index) => `${index + 1}. ${takeaway}`).join('\n')}
 
 Daily Practice Tips:
-${practiceTips.map((tip, index) => `• ${tip}`).join('\n')}
+${practiceTips.map((tip) => `• ${tip}`).join('\n')}
 
 Remember: Start where you are, not where you think you should be.
 Yoga is a journey of self-discovery and inner peace.
@@ -74,22 +73,22 @@ Namaste 🙏
 
   return (
     <Card className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 border-0">
-      <CardContent className="p-8 max-w-6xl w-full">
+      <CardContent className="p-4 md:p-6 lg:p-8 max-w-6xl w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-8 md:mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
               Your Yoga Journey Begins
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8">
               Thank you for exploring the world of yoga with us
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
             <motion.div variants={itemVariants}>
               <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
                 <Sparkles className="h-6 w-6 text-yellow-500 mr-2" />
@@ -133,7 +132,7 @@ Namaste 🙏
             </motion.div>
           </div>
 
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <motion.div variants={itemVariants} className="text-center mb-8 md:mb-12">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 shadow-lg text-white">
               <h2 className="text-3xl font-bold mb-4">
                 Start with 5 Minutes Daily
@@ -148,7 +147,7 @@ Namaste 🙏
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="flex justify-center space-x-4 mb-8">
+          <motion.div variants={itemVariants} className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 mb-6 md:mb-8">
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="outline" size="lg" className="px-6 py-3">

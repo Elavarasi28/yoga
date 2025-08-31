@@ -8,8 +8,8 @@ export const TypesOfYogaSlide: React.FC = () => {
     {
       id: "hatha",
       name: "Hatha Yoga",
-      description: "Physical postures and breathing techniques for balance and strength",
-      analogy: "Like 'Thalapathy' - strong foundation and classic approach",
+      subtitle: "The Physical Discipline",
+      description: "The most common form of yoga in the West. Focuses on physical postures (asanas), breathing (pranayama), and relaxation. 'Ha' means sun, 'Tha' means moon → it balances opposite energies in the body. Great for beginners because it's gentle, slow, and builds the foundation.",
       icon: Flame,
       color: "text-orange-600",
       bgColor: "bg-orange-50"
@@ -17,8 +17,8 @@ export const TypesOfYogaSlide: React.FC = () => {
     {
       id: "raja",
       name: "Raja Yoga",
-      description: "Meditation and mental discipline for spiritual growth",
-      analogy: "Like 'Superstar' - the king of all yogas, complete mastery",
+      subtitle: "The Royal Path – Meditation & Mind Control",
+      description: "Known as the 'Yoga of Meditation.' Systemized by Sage Patanjali in the Yoga Sutras. Focuses on the 8 Limbs of Yoga (Yama, Niyama, Asana, Pranayama, Pratyahara, Dharana, Dhyana, Samadhi). Goal = control the mind → reach inner peace and self-realization.",
       icon: Lightbulb,
       color: "text-yellow-600",
       bgColor: "bg-yellow-50"
@@ -26,8 +26,8 @@ export const TypesOfYogaSlide: React.FC = () => {
     {
       id: "bhakti",
       name: "Bhakti Yoga",
-      description: "Devotion and love as a path to spiritual enlightenment",
-      analogy: "Like 'Ilayathalapathy' - emotional depth and heart",
+      subtitle: "The Path of Devotion",
+      description: "Focuses on love, devotion, and surrender to the divine. Involves chanting, singing, prayers, and rituals. Develops emotional purity, compassion, and connection with others. Teaches you to see God in everyone.",
       icon: Heart,
       color: "text-red-600",
       bgColor: "bg-red-50"
@@ -35,8 +35,8 @@ export const TypesOfYogaSlide: React.FC = () => {
     {
       id: "karma",
       name: "Karma Yoga",
-      description: "Selfless service and action without attachment to results",
-      analogy: "Like 'Ulaganayagan' - universal appeal and selfless work",
+      subtitle: "The Path of Action & Selfless Service",
+      description: "Doing your duty without expecting results. Teaches detachment: focus on action, not on the outcome. Builds humility, reduces ego, and helps community. Bhagavad Gita strongly emphasizes Karma Yoga.",
       icon: Target,
       color: "text-green-600",
       bgColor: "bg-green-50"
@@ -44,8 +44,8 @@ export const TypesOfYogaSlide: React.FC = () => {
     {
       id: "jnana",
       name: "Jnana Yoga",
-      description: "Knowledge and wisdom through study and contemplation",
-      analogy: "Like 'Thalaivar' - leadership through knowledge and wisdom",
+      subtitle: "The Path of Knowledge & Wisdom",
+      description: "The intellectual approach to yoga. Focuses on self-inquiry: 'Who am I?' Involves study of scriptures, contemplation, and meditation. Goal = realize the difference between the self (Atman) and illusion (Maya).",
       icon: BookOpen,
       color: "text-blue-600",
       bgColor: "bg-blue-50"
@@ -54,23 +54,23 @@ export const TypesOfYogaSlide: React.FC = () => {
 
   return (
     <Card className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 border-0">
-      <CardContent className="p-8 max-w-6xl w-full">
+      <CardContent className="p-4 md:p-6 lg:p-8 max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8"
+          className="text-center mb-6 md:mb-8"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
             Types of Yoga
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8">
             Different paths, same destination - find your perfect yoga style
           </p>
         </motion.div>
 
         <Tabs defaultValue="hatha" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mb-6 md:mb-8">
             {yogaTypes.map((type, index) => (
               <motion.div
                 key={type.id}
@@ -80,7 +80,7 @@ export const TypesOfYogaSlide: React.FC = () => {
               >
                 <TabsTrigger 
                   value={type.id}
-                  className="text-xs md:text-sm px-2 md:px-4"
+                  className="text-xs md:text-sm px-1 md:px-2 lg:px-4 py-2"
                 >
                   {type.name}
                 </TabsTrigger>
@@ -100,43 +100,22 @@ export const TypesOfYogaSlide: React.FC = () => {
                   <div className={`${type.color} text-6xl mb-4`}>
                     <type.icon className="h-16 w-16 mx-auto" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
                     {type.name}
                   </h2>
+                  <h3 className="text-lg md:text-xl text-gray-600 mb-6 font-medium">
+                    {type.subtitle}
+                  </h3>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                      What it is:
-                    </h3>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <div className="max-w-4xl mx-auto">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                    Description:
+                  </h3>
+                  <div className="bg-white rounded-lg p-6 shadow-md">
+                    <p className="text-lg text-gray-700 leading-relaxed">
                       {type.description}
                     </p>
-                    
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                      Tamil Movie Analogy:
-                    </h3>
-                    <div className="bg-white rounded-lg p-4 shadow-md">
-                      <p className="text-lg text-gray-700 italic">
-                        "{type.analogy}"
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="text-8xl mb-4">🎬</div>
-                    <p className="text-lg text-gray-600 mb-4">
-                      <strong>Meme Placeholder:</strong>
-                    </p>
-                    <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
-                      <p className="text-gray-500 text-sm">
-                        📁 public/memes/{type.id}_yoga_meme.jpg
-                      </p>
-                      <p className="text-xs text-gray-400 mt-2">
-                        Replace with {type.name} related meme
-                      </p>
-                    </div>
                   </div>
                 </div>
               </motion.div>

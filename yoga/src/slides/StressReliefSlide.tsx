@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { AlertTriangle, Heart, Brain, ArrowRight } from 'lucide-react';
+import { AlertTriangle, Heart, Brain } from 'lucide-react';
 
 export const StressReliefSlide: React.FC = () => {
   const stressSigns = [
@@ -52,22 +52,22 @@ export const StressReliefSlide: React.FC = () => {
 
   return (
     <Card className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-pink-50 to-red-50 border-0">
-      <CardContent className="p-8 max-w-6xl w-full">
+      <CardContent className="p-4 md:p-6 lg:p-8 max-w-6xl w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-8 md:mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
               Yoga for Stress Relief
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8">
               Recognize stress and learn how breathing can be your natural remedy
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
             {stressSigns.map((sign) => (
               <motion.div
                 key={sign.sign}
@@ -89,9 +89,9 @@ export const StressReliefSlide: React.FC = () => {
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8 items-center mb-12">
+          <motion.div variants={itemVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 items-center mb-8 md:mb-12">
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
                 How Breathing Helps
               </h2>
               <ul className="space-y-3">
@@ -111,38 +111,35 @@ export const StressReliefSlide: React.FC = () => {
             </div>
 
             <div className="text-center">
-              <div className="text-8xl mb-4">😰</div>
-              <p className="text-lg text-gray-700 mb-4">
-                <strong>Meme Placeholder:</strong> Stress + relief humor
-              </p>
-              <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
-                <p className="text-gray-500 text-sm">
-                  📁 public/memes/stress_relief_meme.jpg
-                </p>
-                <p className="text-xs text-gray-400 mt-2">
-                  Replace with stress relief meme
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-gray-800 mb-6">Yoga Transformation</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <h4 className="text-lg font-semibold text-gray-700 mb-4">Me before yoga:</h4>
+                    <div className="bg-gray-100 rounded-lg p-4 mb-3">
+                      <div className="text-6xl mb-2">😫</div>
+                      <div className="text-sm text-gray-600">
+                        Stressed, overwhelmed, scattered thoughts
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <h4 className="text-lg font-semibold text-gray-700 mb-4">Me after yoga:</h4>
+                    <div className="bg-green-50 rounded-lg p-4 mb-3">
+                      <div className="text-6xl mb-2">🧘‍♀️</div>
+                      <div className="text-sm text-green-700">
+                        Calm, centered, peaceful mind
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-500 mt-4 italic">
+                  "Yoga: Turning stress into serenity, one breath at a time"
                 </p>
               </div>
             </div>
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 shadow-lg text-white">
-              <h2 className="text-3xl font-bold mb-4">
-                Ready to Try Breathing?
-              </h2>
-              <p className="text-xl mb-6 opacity-90">
-                Experience the power of conscious breathing in our interactive demo
-              </p>
-              <div className="flex items-center justify-center space-x-2 text-lg">
-                <span>Next slide: Breathing Practice</span>
-                <ArrowRight className="h-5 w-5" />
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </CardContent>
     </Card>
