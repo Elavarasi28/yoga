@@ -111,30 +111,16 @@ export const StressReliefSlide: React.FC = () => {
             </div>
 
             <div className="text-center">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Yoga Transformation</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <h4 className="text-lg font-semibold text-gray-700 mb-4">Me before yoga:</h4>
-                    <div className="bg-gray-100 rounded-lg p-4 mb-3">
-                      <div className="text-6xl mb-2">😫</div>
-                      <div className="text-sm text-gray-600">
-                        Stressed, overwhelmed, scattered thoughts
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <h4 className="text-lg font-semibold text-gray-700 mb-4">Me after yoga:</h4>
-                    <div className="bg-green-50 rounded-lg p-4 mb-3">
-                      <div className="text-6xl mb-2">🧘‍♀️</div>
-                      <div className="text-sm text-green-700">
-                        Calm, centered, peaceful mind
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-500 mt-4 italic">
-                  "Yoga: Turning stress into serenity, one breath at a time"
+              <div className="text-8xl mb-4">😰</div>
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>Meme Placeholder:</strong> Stress + relief humor
+              </p>
+              <div className="p-4 bg-white rounded-lg border-2 border-dashed border-gray-300">
+                <p className="text-gray-500 text-sm">
+                  📁 public/memes/stress_relief_meme.jpg
+                </p>
+                <p className="text-xs text-gray-400 mt-2">
+                  Replace with stress relief meme
                 </p>
               </div>
             </div>

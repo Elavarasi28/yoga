@@ -192,7 +192,21 @@ export const QuizSlide: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-6 ">
+                {/* Pose Image */}
+                <div className="text-center">
+                  <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 mb-4">
+                    <div className="w-48 h-48 mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+                      <img 
+                        src={`/images/Surya-Namaskar-Step-${selectedPoseData.id}.jpg`}
+                        alt={`${selectedPoseData.sanskrit} - ${selectedPoseData.english}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm text-gray-500 mt-2">Step {selectedPoseData.id}</p>
+                  </div>
+                </div>
+
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-2">
                     Description

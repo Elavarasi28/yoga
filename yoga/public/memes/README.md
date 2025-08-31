@@ -48,3 +48,4 @@ If a meme image is not found or fails to load, the app will automatically show a
 ## Current Placeholders
 
 The app currently shows placeholder content for slides without meme images. Replace these with actual relevant memes to enhance the presentation experience.
+

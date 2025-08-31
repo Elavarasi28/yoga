@@ -207,3 +207,4 @@ The app is ready for immediate use in presentations, training sessions, or as a 
 **Ready to present!** 🚀
 
 The app is running at `http://localhost:5173` and ready for your yoga wealth presentation.
+

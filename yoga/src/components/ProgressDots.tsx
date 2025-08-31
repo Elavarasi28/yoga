@@ -28,3 +28,4 @@ export const ProgressDots: React.FC = () => {
     </div>
   );
 };
+
